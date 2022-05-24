@@ -1,0 +1,16 @@
+<p>'Beers from the database:', <%- beersFromApi[0].name %></p>
+
+<ul>
+
+    <% beersFromApi.forEach(beer => { %>
+        <div>
+            <img src="<%= beer.image_url %>" alt="beer image" style="height:200px">
+            <%- beer.name %>
+            <%- beer.description %>
+            <%- beer.tagline %>
+        </div>
+    <% }); %> 
+</ul>
+
+
+    
