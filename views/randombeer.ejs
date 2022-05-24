@@ -1,0 +1,22 @@
+<%- console.log(responseFromAPI) %>
+
+<div>
+    <div>
+        ><img src="<%= responseFromAPI[0].image_url %>" alt="beer image" style="height:200px">
+    </div>
+    <div>
+        <%- responseFromAPI[0].name %>
+    </div>
+    <div>
+        <%- responseFromAPI[0].description %>
+    </div>
+    <div>
+        <%- responseFromAPI[0].tagline %>
+    </div>
+    <div>
+        <%- responseFromAPI[0].food_pairing %>
+    </div>
+    <div>
+        <%- responseFromAPI[0].brewers_tips %>
+    </div>
+</div>
