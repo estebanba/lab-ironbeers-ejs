@@ -1,15 +1,11 @@
-
-<ul>
-
+<div class="beer-grid">
     <% beersFromApi.forEach(beer => { %>
         <div>
-            <img src="<%= beer.image_url %>" alt="beer image" style="height:200px">
-            <%- beer.name %>
-            <%- beer.description %>
-            <%- beer.tagline %>
+            <%- include('./partials/onebeer.ejs', { beer }) %>
         </div>
-    <% }); %> 
-</ul>
+        <% }); %>
+</div>
+     
 
 
     

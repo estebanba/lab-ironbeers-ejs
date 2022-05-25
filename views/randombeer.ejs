@@ -4,19 +4,22 @@
     <div>
         ><img src="<%= responseFromAPI[0].image_url %>" alt="beer image" style="height:200px">
     </div>
-    <div>
+    <h2>
         <%- responseFromAPI[0].name %>
-    </div>
-    <div>
+    </h2>
+    <p>
         <%- responseFromAPI[0].description %>
-    </div>
-    <div>
+    </p>
+    <p>
         <%- responseFromAPI[0].tagline %>
-    </div>
-    <div>
-        <%- responseFromAPI[0].food_pairing %>
-    </div>
-    <div>
+    </p>
+    <ul>
+        <h3>Food Pairing</h3>
+        <% responseFromAPI[0].food_pairing.forEach(food => { %>
+            <li><%= food %></li>
+            <% }); %>
+    </ul>
+    <p>
         <%- responseFromAPI[0].brewers_tips %>
-    </div>
+    </p>
 </div>
